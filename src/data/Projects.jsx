@@ -5,6 +5,7 @@ import cognisun from "../assets/cognisun.png";
 import stayin from "../assets/stayin.png";
 import ldhfarmer from "../assets/ldhfarmer.png";
 import mhs from "../assets/mhs.png";
+import rcaa2 from "../assets/rcaa2.png";
 
 const projects = [
   {
@@ -33,6 +34,15 @@ const projects = [
     tags: "UX • CRM • Product Strategy",
     button: "Visit Site",
     link: "https://www.cognisun.com",
+  },
+  {
+    image: rcaa2,
+    title: "Rotary Club Ahmedabad Airport Mobile ",
+    subtitle: "Community  App UI/UX",
+    desc: "Created mobile-first UI/UX screens to enhance engagement and improve navigation for community features.",
+    tags: "Mobile App • Wireframes • UX",
+    // button: "View Screens",
+    // link: "#",
   },
   {
     image: mhs,
