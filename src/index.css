@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.glass {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.toast-progress-bar {
+  background: #fff !important;
+}
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+  /* background: #000; black track */
+}
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+  background: #444;  /* dark grey thumb */
+  border-radius: 8px;
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
