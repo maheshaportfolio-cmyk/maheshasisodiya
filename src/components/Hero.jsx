@@ -4,6 +4,10 @@ import hero from "../assets/hero.png";
 import { useState } from "react";
 import HireMeModal from "./HireMeModal";
 import girli from "../assets/girli.webp"
+import img1 from "../assets/img1.png";
+import img2 from "../assets/img2.png";
+import img3 from "../assets/img3.png";
+import img4 from "../assets/img4.png";
 export default function Hero() {
   const [openModal, setOpenModal] = useState(false);
 
@@ -92,8 +96,8 @@ pt-24 sm:pt-36 md:pt-48
             className="absolute rounded-full blur-[35px] opacity-50 w-[200px] h-[200px] bg-gradient-to-br from-gray-200 to-gray-400 -z-10"
           />
 
-         <div className="relative backdrop-blur-xl   flex items-center justify-center w-[160px] h-[220px] sm:w-[200px] sm:h-[260px] md:w-[240px] md:h-[330px] bg-white rounded-2xl overflow-hidden">
-  <img src={girli} className="w-full h-full object-cover" alt="UI UX Designer" />
+         <div className="relative backdrop-blur-xl   flex items-center justify-center w-[220px] h-[220px] sm:w-[200px] sm:h-[260px] md:w-[290px] md:h-[330px] bg-white rounded-2xl overflow-hidden">
+  <img src={img2} className="w-full h-full object-cover" alt="UI UX Designer" />
 </div>
 
 <div

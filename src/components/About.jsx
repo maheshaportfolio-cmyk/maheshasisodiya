@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import profile from "../assets/hero.png";
 import { FaArrowDown } from "react-icons/fa";
-import girl from "../assets/girl.avif"
+import girl from "../assets/girl.avif";
 
 export default function AboutExperience() {
   const experiences = [
