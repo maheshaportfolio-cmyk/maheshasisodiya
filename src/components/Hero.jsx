@@ -96,8 +96,8 @@ pt-24 sm:pt-36 md:pt-48
             className="absolute rounded-full blur-[35px] opacity-50 w-[200px] h-[200px] bg-gradient-to-br from-gray-200 to-gray-400 -z-10"
           />
 
-         <div className="relative backdrop-blur-xl   flex items-center justify-center w-[220px] h-[220px] sm:w-[200px] sm:h-[260px] md:w-[290px] md:h-[330px] bg-white rounded-2xl overflow-hidden">
-  <img src={img2} className="w-full h-full object-cover" alt="UI UX Designer" />
+         <div className="relative backdrop-blur-xl   flex items-center justify-center w-[220px] h-[220px] sm:w-[200px] sm:h-[260px] md:w-[300px] md:h-[330px] bg-white rounded-2xl overflow-hidden">
+  <img src={img4} className="w-full h-full object-cover" alt="UI UX Designer" />
 </div>
 
 <div

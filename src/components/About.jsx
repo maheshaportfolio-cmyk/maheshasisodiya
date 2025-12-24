@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import profile from "../assets/hero.png";
 import { FaArrowDown } from "react-icons/fa";
 import girl from "../assets/girl.avif";
+import girli23 from "../assets/girli23.png";
 
 export default function AboutExperience() {
   const experiences = [
@@ -76,7 +77,7 @@ export default function AboutExperience() {
           className="flex flex-col items-center text-center"
         >
           <div className="w-64 h-64 rounded-full border-4 border-black overflow-hidden shadow-xl">
-            <img src={girl} className="w-full h-full object-cover" />
+            <img src={girli23} className="w-full h-full object-cover" />
           </div>
 
           <div className="flex flex-wrap justify-center gap-3 mt-6">
