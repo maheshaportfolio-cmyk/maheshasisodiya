@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import hero from "../assets/hero.png";
 import tectona from "../assets/tectona.png";
 import cognisun from "../assets/cognisun.png";
 import stayin from "../assets/stayin.png";
@@ -14,89 +13,80 @@ const projects = [
     subtitle: "WordPress + UI/UX Website",
     desc: "Designed and developed a clean, user-centric WordPress site focused on intuitive navigation and improved user flow.",
     tags: "UI/UX Design • WordPress • Branding",
-    button: "Visit Site",
     link: "https://www.tectonagrandis.com",
   },
   {
     image: stayin,
     title: "StayinFront",
-    subtitle: "WordPress + UI/UX Website ",
-    desc: "Redesigned CRM workflows for better usability and increased efficiency, focusing on intuitive interactions.",
-    tags: "UX • WordPress ",
-    button: "Visit Site",
+    subtitle: "WordPress + UI/UX Website",
+    desc: "Redesigned CRM workflows for better usability and efficiency.",
+    tags: "UX • WordPress",
     link: "https://www.stayinfront.com/",
   },
   {
     image: cognisun,
     title: "Cognisun CRM",
     subtitle: "Product Design | UX Strategy",
-    desc: "Redesigned CRM workflows for better usability and increased efficiency, focusing on intuitive interactions.",
+    desc: "Redesigned CRM workflows focusing on intuitive interactions.",
     tags: "UX • CRM • Product Strategy",
-    button: "Visit Site",
     link: "https://www.cognisun.com",
   },
   {
     image: rcaa2,
-    title: "Rotary Club Ahmedabad Airport Mobile ",
-    subtitle: "Community  App UI/UX",
-    desc: "Created mobile-first UI/UX screens to enhance engagement and improve navigation for community features.",
-    tags: "Mobile App • Wireframes • UX",
-    // button: "View Screens",
-    // link: "#",
+    title: "Rotary Club Ahmedabad Airport",
+    subtitle: "Community App UI/UX",
+    desc: "Mobile-first UI/UX for community engagement.",
+    tags: "Mobile App • UX",
   },
   {
     image: mhs,
     title: "Maheshwari Mewad Samaj App",
     subtitle: "Community App UI/UX",
-    desc: "Created mobile-first UI/UX screens to enhance engagement and improve navigation for community features.",
-    tags: "Mobile App • Wireframes • UX",
-    // button: "View Screens",
-    // link: "#",
+    desc: "Clean navigation & user-focused mobile UI.",
+    tags: "Mobile App • UX",
   },
   {
     image: ldhfarmer,
-    title: "LDH FARMER ZONE",
-    subtitle: "Community App UI/UX",
-    desc: "Created mobile-first UI/UX screens to enhance engagement and improve navigation for community features.",
-    tags: "Mobile App • Wireframes • UX",
-    // button: "View Screens",  
-    // link: "#",
+    title: "LDH Farmer Zone",
+    subtitle: "Agro Community App UI/UX",
+    desc: "Designed intuitive UI for farmers & community.",
+    tags: "Mobile App • UX",
   },
 ];
 
 export default function Projects() {
   return (
-    <section className="w-full py-32 bg-white text-black" id="projects">
-      <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-16">
+    <section
+      id="projects"
+      className="relative bg-white text-black py-[100px]"
+    >
+      {/* SECTION TITLE */}
+      <h2 className="text-5xl font-bold text-center mb-[100px]">
+        Featured Work
+      </h2>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-5xl font-bold text-center mb-24 tracking-tight"
-        >
-          Featured Work
-        </motion.h2>
-
-        <div className="space-y-28">
-          {projects.map((project, index) => (
+      {/* STICKY STACK */}
+      <div className="relative max-w-[1500px] mx-auto px-6">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="sticky top-28 mb-[180px]"
+            style={{ zIndex: index + 1 }}
+          >
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0.6, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               className="
-                border border-black/60 rounded-3xl shadow-[0_0_20px_rgba(0,0,0,0.08)]
-                grid grid-cols-1 
-                md:grid-cols-[62%_38%]
-                lg:grid-cols-[68%_32%]
-                overflow-hidden
-                w-full mx-auto
+                bg-white border border-black/60
+                rounded-3xl overflow-hidden
+                shadow-[0_20px_60px_rgba(0,0,0,0.15)]
+                grid grid-cols-1 md:grid-cols-[65%_35%]
               "
             >
-              <div className="w-full h-[260px] sm:h-[380px] md:h-[500px] lg:h-[580px]">
+              {/* IMAGE */}
+              <div className="h-[260px] sm:h-[400px] md:h-[520px]">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -104,20 +94,21 @@ export default function Projects() {
                 />
               </div>
 
-              <div className="px-6 sm:px-10 py-10 flex flex-col justify-center">
-                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+              {/* CONTENT */}
+              <div className="p-8 sm:p-12 flex flex-col justify-center">
+                <h3 className="text-4xl font-bold mb-3">
                   {project.title}
                 </h3>
 
-                <p className="text-lg sm:text-xl text-gray-700 mb-4">
+                <p className="text-xl text-gray-700 mb-4">
                   {project.subtitle}
                 </p>
 
-                <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-4">
+                <p className="text-gray-600 leading-relaxed mb-4">
                   {project.desc}
                 </p>
 
-                <p className="text-gray-800 font-medium text-sm tracking-wide mb-6">
+                <p className="text-sm font-semibold tracking-wide text-gray-800 mb-6">
                   {project.tags}
                 </p>
 
@@ -125,23 +116,21 @@ export default function Projects() {
                   <a
                     href={project.link}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noreferrer"
                     className="
-                      inline-block self-start mt-4 px-8 py-3 rounded-full
-                      border border-black font-semibold text-base
-                      transition-all duration-200
+                      self-start px-8 py-3 rounded-full
+                      border border-black font-semibold
                       hover:bg-black hover:text-white
+                      transition
                     "
                   >
-                    {project.button}
+                    Visit Site
                   </a>
                 )}
               </div>
-
             </motion.div>
-          ))}
-        </div>
-
+          </div>
+        ))}
       </div>
     </section>
   );
